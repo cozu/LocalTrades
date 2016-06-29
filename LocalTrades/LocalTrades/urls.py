@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^trades/', include('trades.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^items/', include('items.urls'))
 ]
