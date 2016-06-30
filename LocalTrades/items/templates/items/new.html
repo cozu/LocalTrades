@@ -1,0 +1,9 @@
+<form action="{% url 'items:create' %}" method="post">
+    {% csrf_token %}
+
+    <label for="name"> Name: </label> <input type="text" name="name" id="name" value="" />
+    <label for="description"> Description: </label> <input type="text" name="description" id="description" value="" />
+    <label for="price"> Price: </label> <input type="text" name="price" id="price" value=""/>
+
+    <input type="submit" value="Add"/>
+</form>

@@ -1,0 +1,9 @@
+<form action="{% url 'items:edit' item.id %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="id" id="id" value="{{ item.id }}"/>
+    <label for="name"> Name: </label> <input type="text" name="name" id="name" value="{{ item.name }}" />
+    <label for="description"> Description: </label> <input type="text" name="description" id="description" value="{{ item.description }}" />
+    <label for="price"> Price: </label> <input type="text" name="price" id="price" value="{{ item.price }}"/>
+
+    <input type="submit" value="Update"/>
+</form>
